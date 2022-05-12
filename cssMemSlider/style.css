@@ -1,4 +1,55 @@
 * {
-  background-color: aqua;
-  color: brown;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  background-image: url(assets/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-mem {
+  position: relative;
+  width: 60vw;
+  height: 70vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+input {
+  position: absolute;
+  cursor: pointer;
+}
+
+label {
+  width: 1rem;
+  height: 1rem;
+  border: solid 0.2px white;
+  z-index: 2;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.slide {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 70%;
+  z-index: 999;
+  /* transform: translateX(-100%); */
+  transition-duration: 0.4s;
+  opacity: 1;
+}
+
+.pictur1 {
+  background-image: url(https://static.tildacdn.com/tild6465-6132-4937-b964-336163313261/mem-2-1024x683.jpg);
 }
