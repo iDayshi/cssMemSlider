@@ -4,7 +4,7 @@
 }
 
 body {
-  background-image: url(assets/bg.jpg);
+  background-color: #d1e0ff;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -18,8 +18,9 @@ body {
 .slider-mem {
   display: flex;
   justify-content: center;
+  justify-content: flex-end;
   position: relative;
-  width: 60vw;
+  width: 50vw;
   height: 70vh;
   text-align: center;
   overflow: hidden;
@@ -28,24 +29,39 @@ body {
 input {
   position: absolute;
   display: none;
+  padding: 10rem;
 }
 
 label {
   width: 1rem;
   height: 1rem;
-  border: solid 0.15rem white;
+  background-color: teal;
+  border: 0.3rem solid #d1e0ff;
   border-radius: 0.25rem;
-  margin: 50vh 0.5rem;
+  margin: 52vh 0.1rem;
   cursor: pointer;
-  transition-duration: 0.5s;
+  transition-duration: 0.1s;
+  outline: 0rem solid #10d1de;
+}
+
+label:hover {
+  outline: 0.2rem solid #10d1de;
 }
 
 input:checked + label {
-  background-color: teal;
+  background-color: #10d1d5;
 }
 
 input:focus + label {
-  box-shadow: 0 0 0 2px teal, 0 0 18px white;
+  box-shadow: 0 0 0 2px #10d1d5, 0 0 18px white;
+}
+
+.text {
+  transform: translateX(-100%);
+  font-size: 2rem;
+  position: absolute;
+  padding: 20px;
+  margin: 50vh;
 }
 
 .slide {
@@ -67,18 +83,26 @@ input:checked + label + .slide {
   transform: translateX(0);
 }
 
+input:checked ~ .text {
+  transform: translateX(100%);
+}
+
+input:checked + label + .text {
+  transform: translateX(0);
+}
+
 .pictur1 {
-  background-image: url(https://static.tildacdn.com/tild6465-6132-4937-b964-336163313261/mem-2-1024x683.jpg);
+  background-image: url(./assets/mem1.jpg);
 }
 .pictur2 {
-  background-image: url(https://everest-tour.by/wp-content/uploads/2019/12/gervyati_kostel-500x300.jpg);
+  background-image: url(./assets/mem2.jpg);
 }
 .pictur3 {
-  background-image: url(https://everest-tour.by/wp-content/uploads/2019/12/tur-grodno-2dnya-500x300.jpg);
+  background-image: url(./assets/mem3.jpg);
 }
 .pictur4 {
-  background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/5c/99/eb/4.jpg?w=500&h=300&s=1);
+  background-image: url(./assets/mem4.jpg);
 }
 .pictur5 {
-  background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/5c/99/eb/4.jpg?w=500&h=300&s=1);
+  background-image: url(./assets/mem5.jpg);
 }
